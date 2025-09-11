@@ -76,4 +76,10 @@ public class EmployeeController {
     		
     	}
     	
+    	@GetMapping("/count")
+    	public long gcount()
+    	{
+    		return employeeService.getcount();
+    	}
+    	
 }

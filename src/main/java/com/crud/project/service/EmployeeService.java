@@ -60,4 +60,9 @@ public class EmployeeService {
 		return null;
 		
 	}
+	
+	public long getcount()
+	{
+		return employeeRepository.count();
+	}
 }
