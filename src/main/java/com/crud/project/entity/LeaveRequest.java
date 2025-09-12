@@ -9,7 +9,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table
 public class LeaveRequest {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -66,6 +65,4 @@ public class LeaveRequest {
 				+ ", enddate=" + enddate + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
 	}
-
-	
 }
