@@ -5,8 +5,10 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.crud.project.entity.Employee;
+import com.crud.project.entity.User;
 import com.crud.project.repository.EmployeeRepository;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -60,9 +62,10 @@ public class EmployeeService {
 		return null;
 		
 	}
-	
+	//count employee
 	public long getcount()
 	{
 		return employeeRepository.count();
 	}
+	
 }
