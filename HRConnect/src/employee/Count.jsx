@@ -25,8 +25,8 @@ function Count() {
 },[])
 
   return (
-    <div>
-      <h3>Total Employees: {count}</h3>
+    <div className="container mt-3">
+      <h3>Total Employees register: {count}</h3>
     </div>
   );
 }

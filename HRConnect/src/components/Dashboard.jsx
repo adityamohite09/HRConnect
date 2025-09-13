@@ -30,12 +30,12 @@ function Dashboard() {
     const handledelete =async (empid)=>{
         try{
             const response = await fetch(`http://localhost:8080/api/employee/${empid}`,
-               { method:"DELETE",}
+               { method:"DELETE"}
             );
        
             if (response.ok) {
       console.log("Employee deleted successfully!");
-      setEmployees(employees.filter(emp => emp.id !== empid)); // update UI
+      setEmployees(employees.filter(emp => emp.id !== empid));
     } else {
       console.error("Failed to delete employee");
     }
@@ -73,7 +73,7 @@ function Dashboard() {
                             <td>{employee.email}</td>
                             <td>{employee.phone}</td>
                             <td>{employee.department}</td>
-                            <td><Button variant="outline-secondary" onClick={()=>handleupdate(employee.id)}>Update</Button>{" "} <Button variant="outline-danger"onClick={() => handledelete(employee.id)}
+                            <td><Button variant="outline-secondary" onClick={()=>handleupdate(employee.id)} >Update</Button>{" "} <Button variant="outline-danger"onClick={() => handledelete(employee.id)}
  >Delete</Button></td>
                         </tr>
                     ))}

@@ -22,7 +22,7 @@ function Login() {
         localStorage.setItem("user", JSON.stringify(data));
         if(data.role == "hr")
         {
-          navi("/dashboard")
+          navi("/admin")
         }
         else
         {

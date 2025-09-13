@@ -1,8 +1,6 @@
 
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import './App.css'
-import Emp from './components/Emp'
-import PostEmp from './components/PostEmp'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Notfound from './components/Notfound'
@@ -27,14 +25,6 @@ function App() {
       path:"/",
       element:<div><Nav/><Home/><Footer/></div>,
     },
-    {
-       path:"/emp",
-      element:<div><Navbar/><Emp/><Footer/></div>,
-    },
-    {
-       path:"/postemp",
-      element:<div><Navbar/><PostEmp/><Footer/></div>,
-    },
      {
        path:"/registration",
       element:<div><Nav/><Registration/><Footer/></div>,
@@ -45,15 +35,15 @@ function App() {
     },
      {
        path:"/Dashboard",
-      element:<div><Navbar/><Dashboard/><Footer/></div>,
+      element:<div><Nav/><Dashboard/><Footer/></div>,
     },
     {
        path:"/alluser",
-      element:<div><Navbar/><Alluser/><Footer/></div>,
+      element:<div><Nav/><Alluser/><Footer/></div>,
     },
      {
        path:"/employee",
-      element:<div><Navbar/><PostUSer/><Footer/></div>,
+      element:<div><Nav/><PostUSer/><Footer/></div>,
     },
      {
        path:"/profile",
@@ -73,11 +63,11 @@ function App() {
     },
     {
        path:"/employee/:id",
-      element:<div><Navbar/><UpdateUser/><Footer/></div>,
+      element:<div><Nav/><UpdateUser/><Footer/></div>,
     },
     {
        path:"/count",
-      element:<div><Navbar/><Count/><Footer/></div>,
+      element:<div><Nav/><Count/><Footer/></div>,
     },
      {
         path : "*",

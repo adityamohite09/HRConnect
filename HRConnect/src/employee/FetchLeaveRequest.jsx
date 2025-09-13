@@ -27,10 +27,11 @@ function FetchLeaveRequest() {
     },[]
     )
   return (
+    <section className='container'>
     <div className='table-responsive'>
         
-           
-                <table className='table table-striped table-bordered'>
+           <h3 className='text-center mt-3'>See All Employee Leave Request</h3>
+                <table className='table table-striped table-bordered mt-4'>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -52,6 +53,7 @@ function FetchLeaveRequest() {
                     </tbody>
                 </table>
     </div>
+    </section>
   )
 }
 

@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function LeaveRequest() {
-
+    
+   const navi =useNavigate();
+  function handlepage(){
+       
+        navi("/profile");
+    }
     const[leave,setLeave] = useState(
         {
             name:"",
@@ -10,6 +16,7 @@ function LeaveRequest() {
             enddate:""
         }
     );
+    
 
     const handleinputchange=(event)=>{
         const{name,value}=event.target;
@@ -65,6 +72,7 @@ function LeaveRequest() {
        
       </form>
     </div>
+    <button className='btn btn-danger mt-3' onClick={handlepage}>go to profile page</button>
     </div>
   )
 }

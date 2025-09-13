@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import "./PostUser.css"
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom';
@@ -35,7 +34,7 @@ function PostUSer() {
             const data = await response.json();
             console.log("Employee create :",data);
 
-            navigate("/")
+           alert("successfully post employee...!");
 
         }catch(error)
         {

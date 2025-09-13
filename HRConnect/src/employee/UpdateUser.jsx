@@ -40,7 +40,7 @@ function UpdateUser() {
       e.preventDefault();
 
       try{
-        const response = await fetch("http://localhost:8080/api/employee/${id}",
+        const response = await fetch(`http://localhost:8080/api/employee/${id}`,
           {
             method:'PATCH',
             headers:{
@@ -52,6 +52,7 @@ function UpdateUser() {
 
         const data = await response.json();
         console.log("user updated : ",data);
+        alert("update employee",data);
         navigate(`/`)
       }catch(error)
       {
